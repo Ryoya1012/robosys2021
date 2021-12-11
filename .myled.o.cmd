@@ -17,46 +17,35 @@ deps_/home/ubuntu/myled/myled.o := \
     $(wildcard include/config/arm64.h) \
     $(wildcard include/config/retpoline.h) \
     $(wildcard include/config/arch/use/builtin/bswap.h) \
-  include/linux/fs.h \
-    $(wildcard include/config/read/only/thp/for/fs.h) \
-    $(wildcard include/config/sysfs.h) \
-    $(wildcard include/config/smp.h) \
-    $(wildcard include/config/fs/posix/acl.h) \
-    $(wildcard include/config/security.h) \
-    $(wildcard include/config/cgroup/writeback.h) \
-    $(wildcard include/config/ima.h) \
-    $(wildcard include/config/file/locking.h) \
-    $(wildcard include/config/fsnotify.h) \
-    $(wildcard include/config/fs/encryption.h) \
-    $(wildcard include/config/fs/verity.h) \
-    $(wildcard include/config/preempt.h) \
-    $(wildcard include/config/epoll.h) \
-    $(wildcard include/config/compat.h) \
-    $(wildcard include/config/mmu.h) \
-    $(wildcard include/config/quota.h) \
-    $(wildcard include/config/blk/dev/loop.h) \
-    $(wildcard include/config/fs/dax.h) \
-    $(wildcard include/config/block.h) \
-    $(wildcard include/config/mandatory/file/locking.h) \
-    $(wildcard include/config/debug/lock/alloc.h) \
-    $(wildcard include/config/migration.h) \
-    $(wildcard include/config/io/uring.h) \
-  include/linux/linkage.h \
-  include/linux/compiler_types.h \
-  include/linux/stringify.h \
-  include/linux/export.h \
-    $(wildcard include/config/modversions.h) \
-    $(wildcard include/config/module/rel/crcs.h) \
-    $(wildcard include/config/have/arch/prel32/relocations.h) \
+  include/linux/module.h \
     $(wildcard include/config/modules.h) \
-    $(wildcard include/config/trim/unused/ksyms.h) \
+    $(wildcard include/config/sysfs.h) \
+    $(wildcard include/config/modules/tree/lookup.h) \
+    $(wildcard include/config/livepatch.h) \
     $(wildcard include/config/unused/symbols.h) \
-  include/linux/compiler.h \
-    $(wildcard include/config/trace/branch/profiling.h) \
-    $(wildcard include/config/profile/all/branches.h) \
-    $(wildcard include/config/stack/validation.h) \
-    $(wildcard include/config/debug/entry.h) \
-    $(wildcard include/config/kasan.h) \
+    $(wildcard include/config/module/sig.h) \
+    $(wildcard include/config/generic/bug.h) \
+    $(wildcard include/config/kallsyms.h) \
+    $(wildcard include/config/smp.h) \
+    $(wildcard include/config/tracepoints.h) \
+    $(wildcard include/config/tree/srcu.h) \
+    $(wildcard include/config/bpf/events.h) \
+    $(wildcard include/config/jump/label.h) \
+    $(wildcard include/config/tracing.h) \
+    $(wildcard include/config/event/tracing.h) \
+    $(wildcard include/config/ftrace/mcount/record.h) \
+    $(wildcard include/config/module/unload.h) \
+    $(wildcard include/config/constructors.h) \
+    $(wildcard include/config/function/error/injection.h) \
+    $(wildcard include/config/strict/module/rwx.h) \
+  include/linux/list.h \
+    $(wildcard include/config/debug/list.h) \
+  include/linux/types.h \
+    $(wildcard include/config/have/uid16.h) \
+    $(wildcard include/config/uid16.h) \
+    $(wildcard include/config/arch/dma/addr/t/64bit.h) \
+    $(wildcard include/config/phys/addr/t/64bit.h) \
+    $(wildcard include/config/64bit.h) \
   include/uapi/linux/types.h \
   arch/arm64/include/generated/uapi/asm/types.h \
   include/uapi/asm-generic/types.h \
@@ -64,27 +53,13 @@ deps_/home/ubuntu/myled/myled.o := \
   include/uapi/asm-generic/int-ll64.h \
   arch/arm64/include/uapi/asm/bitsperlong.h \
   include/asm-generic/bitsperlong.h \
-    $(wildcard include/config/64bit.h) \
   include/uapi/asm-generic/bitsperlong.h \
   include/uapi/linux/posix_types.h \
   include/linux/stddef.h \
   include/uapi/linux/stddef.h \
+  include/linux/compiler_types.h \
   arch/arm64/include/uapi/asm/posix_types.h \
   include/uapi/asm-generic/posix_types.h \
-  arch/arm64/include/asm/barrier.h \
-  include/linux/kasan-checks.h \
-  include/linux/types.h \
-    $(wildcard include/config/have/uid16.h) \
-    $(wildcard include/config/uid16.h) \
-    $(wildcard include/config/arch/dma/addr/t/64bit.h) \
-    $(wildcard include/config/phys/addr/t/64bit.h) \
-  include/asm-generic/barrier.h \
-  arch/arm64/include/asm/linkage.h \
-  include/linux/wait_bit.h \
-  include/linux/wait.h \
-    $(wildcard include/config/lockdep.h) \
-  include/linux/list.h \
-    $(wildcard include/config/debug/list.h) \
   include/linux/poison.h \
     $(wildcard include/config/illegal/pointer/value.h) \
     $(wildcard include/config/page/poisoning/zero.h) \
@@ -93,14 +68,30 @@ deps_/home/ubuntu/myled/myled.o := \
   include/linux/kernel.h \
     $(wildcard include/config/preempt/voluntary.h) \
     $(wildcard include/config/debug/atomic/sleep.h) \
+    $(wildcard include/config/mmu.h) \
     $(wildcard include/config/prove/locking.h) \
     $(wildcard include/config/arch/has/refcount.h) \
     $(wildcard include/config/panic/timeout.h) \
-    $(wildcard include/config/tracing.h) \
-    $(wildcard include/config/ftrace/mcount/record.h) \
   /usr/lib/gcc/aarch64-linux-gnu/9/include/stdarg.h \
   include/linux/limits.h \
   include/uapi/linux/limits.h \
+  include/linux/linkage.h \
+  include/linux/stringify.h \
+  include/linux/export.h \
+    $(wildcard include/config/modversions.h) \
+    $(wildcard include/config/module/rel/crcs.h) \
+    $(wildcard include/config/have/arch/prel32/relocations.h) \
+    $(wildcard include/config/trim/unused/ksyms.h) \
+  include/linux/compiler.h \
+    $(wildcard include/config/trace/branch/profiling.h) \
+    $(wildcard include/config/profile/all/branches.h) \
+    $(wildcard include/config/stack/validation.h) \
+    $(wildcard include/config/debug/entry.h) \
+    $(wildcard include/config/kasan.h) \
+  arch/arm64/include/asm/barrier.h \
+  include/linux/kasan-checks.h \
+  include/asm-generic/barrier.h \
+  arch/arm64/include/asm/linkage.h \
   include/linux/bitops.h \
   include/linux/bits.h \
   arch/arm64/include/asm/bitops.h \
@@ -157,7 +148,6 @@ deps_/home/ubuntu/myled/myled.o := \
     $(wildcard include/config/dynamic/debug.h) \
   include/linux/init.h \
     $(wildcard include/config/strict/kernel/rwx.h) \
-    $(wildcard include/config/strict/module/rwx.h) \
   include/linux/kern_levels.h \
   include/linux/cache.h \
     $(wildcard include/config/arch/has/cache/line/size.h) \
@@ -173,13 +163,21 @@ deps_/home/ubuntu/myled/myled.o := \
     $(wildcard include/config/arm64/16k/pages.h) \
     $(wildcard include/config/arm64/64k/pages.h) \
   include/linux/dynamic_debug.h \
-    $(wildcard include/config/jump/label.h) \
   include/linux/jump_label.h \
     $(wildcard include/config/have/arch/jump/label/relative.h) \
   arch/arm64/include/asm/jump_label.h \
   arch/arm64/include/asm/insn.h \
   arch/arm64/include/generated/asm/div64.h \
   include/asm-generic/div64.h \
+  include/linux/stat.h \
+  arch/arm64/include/asm/stat.h \
+    $(wildcard include/config/compat.h) \
+  arch/arm64/include/generated/uapi/asm/stat.h \
+  include/uapi/asm-generic/stat.h \
+  include/linux/time.h \
+    $(wildcard include/config/arch/uses/gettimeoffset.h) \
+  include/linux/seqlock.h \
+    $(wildcard include/config/debug/lock/alloc.h) \
   include/linux/spinlock.h \
     $(wildcard include/config/debug/spinlock.h) \
     $(wildcard include/config/preemption.h) \
@@ -189,12 +187,12 @@ deps_/home/ubuntu/myled/myled.o := \
     $(wildcard include/config/trace/preempt/toggle.h) \
     $(wildcard include/config/preempt/notifiers.h) \
   arch/arm64/include/asm/preempt.h \
+    $(wildcard include/config/preempt.h) \
   include/linux/thread_info.h \
     $(wildcard include/config/thread/info/in/task.h) \
     $(wildcard include/config/have/arch/within/stack/frames.h) \
     $(wildcard include/config/hardened/usercopy.h) \
   include/linux/bug.h \
-    $(wildcard include/config/generic/bug.h) \
     $(wildcard include/config/bug/on/data/corruption.h) \
   arch/arm64/include/asm/bug.h \
   arch/arm64/include/asm/asm-bug.h \
@@ -273,6 +271,7 @@ deps_/home/ubuntu/myled/myled.o := \
     $(wildcard include/config/nr/cpus.h) \
   include/asm-generic/qrwlock_types.h \
   include/linux/lockdep.h \
+    $(wildcard include/config/lockdep.h) \
     $(wildcard include/config/lock/stat.h) \
   include/linux/rwlock_types.h \
   arch/arm64/include/asm/spinlock.h \
@@ -366,43 +365,6 @@ deps_/home/ubuntu/myled/myled.o := \
     $(wildcard include/config/inline/write/unlock/irq.h) \
     $(wildcard include/config/inline/read/unlock/irqrestore.h) \
     $(wildcard include/config/inline/write/unlock/irqrestore.h) \
-  include/uapi/linux/wait.h \
-  include/linux/kdev_t.h \
-  include/uapi/linux/kdev_t.h \
-  include/linux/dcache.h \
-  include/linux/rculist.h \
-    $(wildcard include/config/prove/rcu/list.h) \
-  include/linux/rcupdate.h \
-    $(wildcard include/config/preempt/rcu.h) \
-    $(wildcard include/config/rcu/stall/common.h) \
-    $(wildcard include/config/no/hz/full.h) \
-    $(wildcard include/config/rcu/nocb/cpu.h) \
-    $(wildcard include/config/tasks/rcu.h) \
-    $(wildcard include/config/tree/rcu.h) \
-    $(wildcard include/config/tiny/rcu.h) \
-    $(wildcard include/config/debug/objects/rcu/head.h) \
-    $(wildcard include/config/prove/rcu.h) \
-    $(wildcard include/config/rcu/boost.h) \
-    $(wildcard include/config/arch/weak/release/acquire.h) \
-  include/linux/rcutree.h \
-  include/linux/rculist_bl.h \
-  include/linux/list_bl.h \
-  include/linux/bit_spinlock.h \
-  include/linux/seqlock.h \
-  include/linux/lockref.h \
-    $(wildcard include/config/arch/use/cmpxchg/lockref.h) \
-  include/generated/bounds.h \
-  include/linux/stringhash.h \
-    $(wildcard include/config/dcache/word/access.h) \
-  include/linux/hash.h \
-    $(wildcard include/config/have/arch/hash.h) \
-  include/linux/path.h \
-  include/linux/stat.h \
-  arch/arm64/include/asm/stat.h \
-  arch/arm64/include/generated/uapi/asm/stat.h \
-  include/uapi/asm-generic/stat.h \
-  include/linux/time.h \
-    $(wildcard include/config/arch/uses/gettimeoffset.h) \
   include/linux/time32.h \
   include/linux/timex.h \
   include/uapi/linux/timex.h \
@@ -430,6 +392,8 @@ deps_/home/ubuntu/myled/myled.o := \
     $(wildcard include/config/uclamp/buckets/count.h) \
     $(wildcard include/config/cgroup/sched.h) \
     $(wildcard include/config/blk/dev/io/trace.h) \
+    $(wildcard include/config/preempt/rcu.h) \
+    $(wildcard include/config/tasks/rcu.h) \
     $(wildcard include/config/psi.h) \
     $(wildcard include/config/memcg.h) \
     $(wildcard include/config/compat/brk.h) \
@@ -438,6 +402,7 @@ deps_/home/ubuntu/myled/myled.o := \
     $(wildcard include/config/stackprotector.h) \
     $(wildcard include/config/arch/has/scaled/cputime.h) \
     $(wildcard include/config/virt/cpu/accounting/gen.h) \
+    $(wildcard include/config/no/hz/full.h) \
     $(wildcard include/config/posix/cputimers.h) \
     $(wildcard include/config/keys.h) \
     $(wildcard include/config/sysvipc.h) \
@@ -447,6 +412,7 @@ deps_/home/ubuntu/myled/myled.o := \
     $(wildcard include/config/rt/mutexes.h) \
     $(wildcard include/config/debug/mutexes.h) \
     $(wildcard include/config/ubsan.h) \
+    $(wildcard include/config/block.h) \
     $(wildcard include/config/compaction.h) \
     $(wildcard include/config/task/xacct.h) \
     $(wildcard include/config/cpusets.h) \
@@ -463,11 +429,25 @@ deps_/home/ubuntu/myled/myled.o := \
     $(wildcard include/config/kcov.h) \
     $(wildcard include/config/uprobes.h) \
     $(wildcard include/config/bcache.h) \
-    $(wildcard include/config/livepatch.h) \
+    $(wildcard include/config/security.h) \
     $(wildcard include/config/arch/task/struct/on/stack.h) \
     $(wildcard include/config/debug/rseq.h) \
   include/uapi/linux/sched.h \
   include/linux/pid.h \
+  include/linux/rculist.h \
+    $(wildcard include/config/prove/rcu/list.h) \
+  include/linux/rcupdate.h \
+    $(wildcard include/config/rcu/stall/common.h) \
+    $(wildcard include/config/rcu/nocb/cpu.h) \
+    $(wildcard include/config/tree/rcu.h) \
+    $(wildcard include/config/tiny/rcu.h) \
+    $(wildcard include/config/debug/objects/rcu/head.h) \
+    $(wildcard include/config/prove/rcu.h) \
+    $(wildcard include/config/rcu/boost.h) \
+    $(wildcard include/config/arch/weak/release/acquire.h) \
+  include/linux/rcutree.h \
+  include/linux/wait.h \
+  include/uapi/linux/wait.h \
   include/linux/refcount.h \
     $(wildcard include/config/refcount/full.h) \
   include/linux/sem.h \
@@ -576,12 +556,8 @@ deps_/home/ubuntu/myled/myled.o := \
     $(wildcard include/config/debug/stack/usage.h) \
   include/uapi/linux/magic.h \
   include/uapi/linux/stat.h \
-  include/linux/list_lru.h \
-    $(wildcard include/config/memcg/kmem.h) \
-  include/linux/shrinker.h \
-  include/linux/radix-tree.h \
-  include/linux/xarray.h \
-    $(wildcard include/config/xarray/multi.h) \
+  include/linux/kmod.h \
+  include/linux/umh.h \
   include/linux/gfp.h \
     $(wildcard include/config/zone/dma.h) \
     $(wildcard include/config/zone/dma32.h) \
@@ -613,6 +589,7 @@ deps_/home/ubuntu/myled/myled.o := \
     $(wildcard include/config/hugetlb/page.h) \
     $(wildcard include/config/hugetlb/page/size/variable.h) \
   include/linux/page-flags-layout.h \
+  include/generated/bounds.h \
   arch/arm64/include/asm/sparsemem.h \
   include/linux/mm_types.h \
     $(wildcard include/config/have/aligned/struct/page.h) \
@@ -653,7 +630,6 @@ deps_/home/ubuntu/myled/myled.o := \
     $(wildcard include/config/have/arch/nodedata/extension.h) \
     $(wildcard include/config/have/bootmem/info/node.h) \
   include/linux/notifier.h \
-    $(wildcard include/config/tree/srcu.h) \
   include/linux/srcu.h \
     $(wildcard include/config/tiny/srcu.h) \
     $(wildcard include/config/srcu.h) \
@@ -669,7 +645,79 @@ deps_/home/ubuntu/myled/myled.o := \
     $(wildcard include/config/generic/arch/topology.h) \
   arch/arm64/include/asm/topology.h \
   include/asm-generic/topology.h \
+  include/linux/sysctl.h \
+    $(wildcard include/config/sysctl.h) \
+  include/uapi/linux/sysctl.h \
+  include/linux/elf.h \
+  arch/arm64/include/asm/elf.h \
+    $(wildcard include/config/compat/vdso.h) \
+  arch/arm64/include/generated/asm/user.h \
+  include/asm-generic/user.h \
+  include/uapi/linux/elf.h \
+  include/uapi/linux/elf-em.h \
+  include/linux/kobject.h \
+    $(wildcard include/config/uevent/helper.h) \
+    $(wildcard include/config/debug/kobject/release.h) \
+  include/linux/sysfs.h \
+  include/linux/kernfs.h \
+    $(wildcard include/config/kernfs.h) \
+  include/linux/idr.h \
+  include/linux/radix-tree.h \
+  include/linux/xarray.h \
+    $(wildcard include/config/xarray/multi.h) \
   include/linux/kconfig.h \
+  include/linux/kobject_ns.h \
+  include/linux/kref.h \
+  include/linux/moduleparam.h \
+    $(wildcard include/config/alpha.h) \
+    $(wildcard include/config/ia64.h) \
+    $(wildcard include/config/ppc64.h) \
+  include/linux/rbtree_latch.h \
+  include/linux/error-injection.h \
+  include/asm-generic/error-injection.h \
+  include/linux/tracepoint-defs.h \
+  include/linux/static_key.h \
+  arch/arm64/include/asm/module.h \
+    $(wildcard include/config/arm64/module/plts.h) \
+    $(wildcard include/config/dynamic/ftrace.h) \
+    $(wildcard include/config/arm64/erratum/843419.h) \
+  include/asm-generic/module.h \
+    $(wildcard include/config/have/mod/arch/specific.h) \
+    $(wildcard include/config/modules/use/elf/rel.h) \
+    $(wildcard include/config/modules/use/elf/rela.h) \
+  include/linux/fs.h \
+    $(wildcard include/config/read/only/thp/for/fs.h) \
+    $(wildcard include/config/fs/posix/acl.h) \
+    $(wildcard include/config/cgroup/writeback.h) \
+    $(wildcard include/config/ima.h) \
+    $(wildcard include/config/file/locking.h) \
+    $(wildcard include/config/fsnotify.h) \
+    $(wildcard include/config/fs/encryption.h) \
+    $(wildcard include/config/fs/verity.h) \
+    $(wildcard include/config/epoll.h) \
+    $(wildcard include/config/quota.h) \
+    $(wildcard include/config/blk/dev/loop.h) \
+    $(wildcard include/config/fs/dax.h) \
+    $(wildcard include/config/mandatory/file/locking.h) \
+    $(wildcard include/config/migration.h) \
+    $(wildcard include/config/io/uring.h) \
+  include/linux/wait_bit.h \
+  include/linux/kdev_t.h \
+  include/uapi/linux/kdev_t.h \
+  include/linux/dcache.h \
+  include/linux/rculist_bl.h \
+  include/linux/list_bl.h \
+  include/linux/bit_spinlock.h \
+  include/linux/lockref.h \
+    $(wildcard include/config/arch/use/cmpxchg/lockref.h) \
+  include/linux/stringhash.h \
+    $(wildcard include/config/dcache/word/access.h) \
+  include/linux/hash.h \
+    $(wildcard include/config/have/arch/hash.h) \
+  include/linux/path.h \
+  include/linux/list_lru.h \
+    $(wildcard include/config/memcg/kmem.h) \
+  include/linux/shrinker.h \
   include/linux/capability.h \
   include/uapi/linux/capability.h \
   include/linux/semaphore.h \
@@ -702,54 +750,6 @@ deps_/home/ubuntu/myled/myled.o := \
   include/linux/projid.h \
   include/uapi/linux/quota.h \
   include/linux/nfs_fs_i.h \
-  include/linux/module.h \
-    $(wildcard include/config/modules/tree/lookup.h) \
-    $(wildcard include/config/module/sig.h) \
-    $(wildcard include/config/kallsyms.h) \
-    $(wildcard include/config/tracepoints.h) \
-    $(wildcard include/config/bpf/events.h) \
-    $(wildcard include/config/event/tracing.h) \
-    $(wildcard include/config/module/unload.h) \
-    $(wildcard include/config/constructors.h) \
-    $(wildcard include/config/function/error/injection.h) \
-  include/linux/kmod.h \
-  include/linux/umh.h \
-  include/linux/sysctl.h \
-    $(wildcard include/config/sysctl.h) \
-  include/uapi/linux/sysctl.h \
-  include/linux/elf.h \
-  arch/arm64/include/asm/elf.h \
-    $(wildcard include/config/compat/vdso.h) \
-  arch/arm64/include/generated/asm/user.h \
-  include/asm-generic/user.h \
-  include/uapi/linux/elf.h \
-  include/uapi/linux/elf-em.h \
-  include/linux/kobject.h \
-    $(wildcard include/config/uevent/helper.h) \
-    $(wildcard include/config/debug/kobject/release.h) \
-  include/linux/sysfs.h \
-  include/linux/kernfs.h \
-    $(wildcard include/config/kernfs.h) \
-  include/linux/idr.h \
-  include/linux/kobject_ns.h \
-  include/linux/kref.h \
-  include/linux/moduleparam.h \
-    $(wildcard include/config/alpha.h) \
-    $(wildcard include/config/ia64.h) \
-    $(wildcard include/config/ppc64.h) \
-  include/linux/rbtree_latch.h \
-  include/linux/error-injection.h \
-  include/asm-generic/error-injection.h \
-  include/linux/tracepoint-defs.h \
-  include/linux/static_key.h \
-  arch/arm64/include/asm/module.h \
-    $(wildcard include/config/arm64/module/plts.h) \
-    $(wildcard include/config/dynamic/ftrace.h) \
-    $(wildcard include/config/arm64/erratum/843419.h) \
-  include/asm-generic/module.h \
-    $(wildcard include/config/have/mod/arch/specific.h) \
-    $(wildcard include/config/modules/use/elf/rel.h) \
-    $(wildcard include/config/modules/use/elf/rela.h) \
   include/linux/cdev.h \
   include/linux/device.h \
     $(wildcard include/config/acpi.h) \
