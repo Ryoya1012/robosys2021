@@ -5,7 +5,7 @@
 Raspberry Pi 4 でLEDを制御。
 
 
-動作環境
+#動作環境
 
 
 OS：Ubuntu20.04server
@@ -13,7 +13,8 @@ OS：Ubuntu20.04server
 
 ハードウェア：Raspberry Pi 4
 
-インストール・ビルド方法
+
+#インストール・ビルド方法
 
 
 1.git clone https://github.com/Ryoya1012/Robosys_device_driver.git
@@ -31,7 +32,7 @@ OS：Ubuntu20.04server
 5.sudo chmod 666 / dev/myled
 
 
-実行方法
+#実行方法
 
 
 点灯
@@ -47,14 +48,14 @@ echo 0 > /dev/myled0
 
 
 
-ドライバのアンインストール
+#ドライバのアンインストール
 
 
 sudo rmmod myled
 
 
 
-実行結果
+#実行結果
 
 
 以下のリンクからyoutubeの動画がご覧できます
@@ -63,10 +64,8 @@ sudo rmmod myled
 https://youtu.be/VcskahKzksw
 
 
-参考
+#参考
  
-
-
 
 以下の動画を参考にしました。
 
