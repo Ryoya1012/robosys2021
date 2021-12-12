@@ -12,14 +12,17 @@ ______
 このコードは、Raspberry Pi 4 でLEDを制御するものです。
 
 
-#　動作環境
+# 動作環境
+
 
 |OS| Ubuntu20.04server |
 ---|---
 |Hardware|Raspberry Pi 4|
 
 
-#使用するもの
+# 使用するもの
+
+
 ・ブレッドボード
 
 ・ジャンパーワイヤー
@@ -29,7 +32,8 @@ ______
 
 ・抵抗200Ω １個
 
-#　インストール・ビルド方法
+# インストール・ビルド方法
+
 
 1.git clone https://github.com/Ryoya1012/Robosys_device_driver.git
  
@@ -46,7 +50,7 @@ ______
 5.sudo chmod 666 / dev/myled
 ->権限付与するため
 
-#　実行方法
+# 実行方法
 
 
 点灯
@@ -62,14 +66,14 @@ echo 0 > /dev/myled0
 
 ->myled.cで変更可能
 
-#　ドライバのアンインストール
+# ドライバのアンインストール
 
 
 sudo rmmod myled
 
 
 
-#　実行結果
+# 実行結果
 
 以下のリンクからyoutubeの動画がご覧できます
 
@@ -77,7 +81,7 @@ sudo rmmod myled
 https://youtu.be/VcskahKzksw
 
 
-#　参考
+# 参考
 
 
 以下の動画を参考にしました。
